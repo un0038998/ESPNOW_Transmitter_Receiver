@@ -76,7 +76,9 @@ void setup()
   esp_now_register_send_cb(OnDataSent);
   
   // Register peer
-  esp_now_peer_info_t peerInfo;
+//esp_now_peer_info_t peerInfo;
+  esp_now_peer_info_t peerInfo = {};
+
   memcpy(peerInfo.peer_addr, receiverMacAddress, 6);
   peerInfo.channel = 0;  
   peerInfo.encrypt = false;
